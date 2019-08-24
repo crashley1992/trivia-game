@@ -19,6 +19,10 @@ if (start = true) {
 
 }
 
+$("#start-button").hide();
+$(".display").show();
+
+
 function timer() {
 
 time++;
@@ -44,14 +48,6 @@ else if (minutes < 10 ) {
 
 return minutes + ":" + seconds;
 }
-
-//create time out for question, going to timeout regarldess
-// var endQuestionTimer;
-// function endQuestion() {
-//     setTimeout(function () {
-//         ++counter;
-//       }, 5000);
-// }
 
 }
 

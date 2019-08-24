@@ -1,19 +1,46 @@
 body {
-    background-color: #6BE8D2;
+   background-image: url("../images/Bubbletown_002.png") !important;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center top; 
 }
 
 h1 {
     text-align: center;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    margin-bottom: 2%;
+}
+
+.timer-display {
+    background-color: white;
+    width: 15%;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+.quiz-display {
+    text-align: center;
+    background: white;
+    margin-top: 2%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .correct-answer {
     display: none;
     background-color: white;
     border: solid black 1px;
     margin-top: 1%;
+    text-align: center;
 }
 
 .button-display {
     margin-top: 2%;
+    padding-bottom: 1%;
     background-color: white;
     border: solid black 1px;
 }
@@ -24,4 +51,14 @@ h1 {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.start-button-display {
+    text-align: center;
+}
+
+.display {
+    display: none;
 }
