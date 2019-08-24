@@ -67,7 +67,7 @@ var quizQuestions = [
 },
 
 {
-    question: "What was the first episode of Spongebob",
+    question: "What was the first episode of Spongebob?",
     answers: {
       a: "Help Wanted",
       b: "Bubble Stand",
@@ -77,13 +77,13 @@ var quizQuestions = [
   },
 
   {
-    question: "Where does Sandy Cheeks Live",
+    question: "Where does Sandy Cheeks Live?",
     answers: {
       a: "Under Water Hut",
       b: "Texas",
       c: "Underwater Tree Dome"
     },
-    correctAnswer: "Underwater Tree Dome"
+    correctAnswer: "Underwater Tree Dome?"
   },
 
   {
@@ -148,6 +148,8 @@ var startQueue = setInterval(queue, 5000);
   function endQuiz() {
 
     $(".quiz-display").text("end");
+    $(".correct-counter").text();
+    $(".quiz-display").text();
 
   }
 
