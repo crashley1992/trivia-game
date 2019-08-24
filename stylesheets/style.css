@@ -71,17 +71,46 @@ h1 {
 .display {
     display: none;
 }
+/*Display at end*/
+.score {
+    display: none;
+    background-color: white;
+    width: 80%;
+    border: solid black 2px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*Correct counter*/
 .correct-counter {
-    color: white;
-    font-size: bold;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
     width: 5%;
     margin-bottom: 1%;
     margin-left: 1%;
     text-align: center;
 }
-
+/*label text styling*/
 #div-correct-counter {
-    color: white;
+    background-color: white;
+    color: green;
+    width: 25%;
+}
+/*label text styling*/
+
+#div-wrong-counter {
+    width: 25%;
+    color: red;
+}
+/*Styles number output*/
+.wrong-counter {
+    color: red;
+    width: 25%;
+}
+
+#end-game-img {
+    width: 300px;
+    height: 200px;
 }

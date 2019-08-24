@@ -4,7 +4,6 @@ var start = false;
 var time = 0;
 // correct answer counter
 var correct = 0;
-
 //stop game
 function stopGame() {
     document.location.reload()
@@ -122,37 +121,52 @@ var startQueue = setInterval(queue, 5000);
     $(".correct-answer").text(quizQuestions[0].correctAnswer);
   }
 //onclick of any response shows answer
-    $("#a, #b, #c").click(function(){
+    $("#a").click(function(){
     $(".correct-answer").show(quizQuestions[0].correctAnswer);
 
     if (quizQuestions[0].answers.a === quizQuestions[0].correctAnswer) {
      console.log("correct");
       correct++;
+      $(".correct-counter").text(correct);
     } else {
         console.log("wrong");
     }
+    
+  });
 
-    if (quizQuestions[0].answers.b === quizQuestions[0].correctAnswer) {
-      console.log("correct");
-      correct++;
+    $("#b").click(function(){
+      $(".correct-answer").show(quizQuestions[0].correctAnswer);
 
+   if (quizQuestions[0].answers.b === quizQuestions[0].correctAnswer) {
+        console.log("correct");
+        correct++;
+        $(".correct-counter").text(correct);
+  
+        } else {
+          console.log("wrong");
+      }
+
+    });
+
+
+    $("#c").click(function(){
+      $(".correct-answer").show(quizQuestions[0].correctAnswer);
+
+      if (quizQuestions[0].answers.c === quizQuestions[0].correctAnswer) {
+        console.log("correct");
+        correct++;
+        $(".correct-counter").text(correct);
+  
       } else {
-        console.log("wrong");
-    }
+          console.log("wrong");
+      }
 
-    if (quizQuestions[0].answers.c === quizQuestions[0].correctAnswer) {
-      console.log("correct");
-      correct++;
+    });
 
-    } else {
-        console.log("wrong");
-    }
     //correct counter --counting every button press
     $(".correct-counter").text(correct);
     console.log(correct);
-    });
-
-   
+    var wrong = 4 - correct;
 
 //End queue display showing trivia is over
   var endQuestions = setTimeout(endQuiz, 20000);
@@ -160,7 +174,12 @@ var startQueue = setInterval(queue, 5000);
   function endQuiz() {
 
     $(".quiz-display").text("End");
-   
+    $(".button-display").hide();
+    $(".score").show();
+    $(".wrong-counter").text(wrong);
+    
   }
 
 }//stat game function closure
+
+
