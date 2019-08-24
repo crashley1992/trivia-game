@@ -166,12 +166,12 @@ var startQueue = setInterval(queue, 5000);
     //correct counter --counting every button press
     $(".correct-counter").text(correct);
     console.log(correct);
-    var wrong = 4 - correct;
 
 //End queue display showing trivia is over
   var endQuestions = setTimeout(endQuiz, 20000);
 
   function endQuiz() {
+    var wrong = 4 - correct;
 
     $(".quiz-display").text("End");
     $(".button-display").hide();
