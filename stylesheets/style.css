@@ -4,14 +4,14 @@ body {
    background-repeat: no-repeat;
    background-position: center top; 
 }
-
+/*Title text*/
 h1 {
     text-align: center;
     font-family: 'Indie Flower', cursive;
     color: white;
     margin-bottom: 2%;
 }
-
+/*For timer once start is clicked*/
 .timer-display {
     background-color: white;
     width: 15%;
@@ -19,7 +19,7 @@ h1 {
     font-weight: bold;
     color: red;
 }
-
+/*Display for question*/
 .quiz-display {
     text-align: center;
     background: white;
@@ -31,6 +31,15 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+/*Shows answer selections*/
+.button-display {
+    margin-top: 2%;
+    padding-bottom: 1%;
+    background-color: white;
+    border: solid black 2px;
+}
+
+/*Display for correct answer*/
 .correct-answer {
     display: none;
     background-color: white;
@@ -43,13 +52,8 @@ h1 {
     margin-right: auto;
 }
 
-.button-display {
-    margin-top: 2%;
-    padding-bottom: 1%;
-    background-color: white;
-    border: solid black 2px;
-}
 
+/*Positioning for buttons*/
 .button-display > button {
     display: block;
     margin-top: 1%;
@@ -59,11 +63,11 @@ h1 {
     font-weight: bold;
     font-size: 25px;
 }
-
+/*Start button is centered*/
 .start-button-display {
     text-align: center;
 }
-
+/*Hides the quiz until start button is selected*/
 .display {
     display: none;
 }
