@@ -2,63 +2,29 @@
 var start = false;
 //timer counter
 var time = 0;
-//correct counter
-var correctAnswerCounter = 0;
-var counter = 0;
 
-function Questions (question, answer1, answer2, correct) {
-    this.question = question;
-    this.answer1 = answer1;
-    this.answer2 = answer2;
-    this.correct = correct;
-}
-
-var q1 = new Questions ("What year did Spongebob air for the first time", 2000, 2002, 1999 );
-var q2 = new Questions ("What was the first episode of Spongebob", "Bubble Stand", "Jelly Fishing", "Help Wanted");
-var q3 = new Questions ("Where does Sandy Cheeks Live", "Under Water Hut", "Texas", "Under Water Treedome" );
-var q4 = new Questions ("What instrument does Squidward play?", "Flute", "Saxaphone", "Claranet");
 
 //stop game
 function stopGame() {
     document.location.reload()
   }
 
-$(".questions-game-card").hide();
 
-//start game button
+//start time button
 function startGame() {
     start = true;
-//Need to make start screen disappear.
-
-//makes question card appear
-$("div").show(".questions-game-card");
-
-
-//Timer number display
-$("#timer-display").text("00:00");
 //timer
 if (start = true) {
     timeStart = setInterval(timer, 1000);
+
 }
- 
+
 function timer() {
 
 time++;
 var converted = timeConverter(time);
 console.log(converted);
-$("#timer-display").text(converted);
-//timer for when questions appear.
-if (time <= 5) {
-displayQuestion1();
-} else if (time <= 10) {
-displayQuestion2();
-} else if (time <=15) {
-    displayQuestion3();
-} else if (time <= 20) {
-    displayQuestion4();
-} else {
-    console.log(endofTriva() + "Time is up");
-}
+$(".timer-display").text(converted);
 
 function timeConverter(i) {
 var minutes = Math.floor(i / 60);
@@ -78,93 +44,111 @@ else if (minutes < 10 ) {
 
 return minutes + ":" + seconds;
 }
- 
+
 //create time out for question, going to timeout regarldess
-var endQuestionTimer;
-function endQuestion() {
-    setTimeout(function () {
-        ++counter;
-      }, 5000);
+// var endQuestionTimer;
+// function endQuestion() {
+//     setTimeout(function () {
+//         ++counter;
+//       }, 5000);
+// }
+
 }
 
-//Check if selected answer is correct
-function displayQuestion1() {
-        $("#question-display").text(q1.question);
-        $("#answers1").text(q1.answer1)
-        $("#answers2").text(q1.correct).click(function(){
-            correctAnswer1();
-            correctAnswerCounter++;
+//Question displays
 
-        });
-        $("#answers3").text(q1.answer2);
+var quizQuestions = [
+{
+    question: "What year did Spongebob air for the first time?",
+
+    answers: {
+        a: "2000",
+        b: "1999",
+        c: "2001"
+    },
+
+    correctAnswer: "1999"
+},
+
+{
+    question: "What was the first episode of Spongebob",
+    answers: {
+      a: "Help Wanted",
+      b: "Bubble Stand",
+      c: "Jelly Fishing"
+    },
+    correctAnswer: "Help Wanted"
+  },
+
+  {
+    question: "Where does Sandy Cheeks Live",
+    answers: {
+      a: "Under Water Hut",
+      b: "Texas",
+      c: "Underwater Tree Dome"
+    },
+    correctAnswer: "Underwater Tree Dome"
+  },
+
+  {
+    question: "What instrument does Squidward play?",
+    answers: {
+      a: "Jazz Flute",
+      b: "Saxaphone",
+      c: "Claranet"
+    },
+    correctAnswer: "Claranet"
+  },
+
+];
+
+
+function hide() {
+    $(".correct-answer").hide(quizQuestions[0].correctAnswer);
+}
+
+var hideAnswer = setInterval(hide, 4800);
+
+var startQuestions = setInterval(questionQueue, 5000);
+  function questionQueue() {
+    $(".quiz-display").text(quizQuestions[0].question);
+    $("#a").text(quizQuestions[0].answers.a);
+    $("#b").text(quizQuestions[0].answers.b);
+    $("#c").text(quizQuestions[0].answers.c);
+    $(".correct-answer").text(quizQuestions[0].correctAnswer);
+
+
+    $("#a, #b, #c").click(function(){
+    $(".correct-answer").show(quizQuestions[0].correctAnswer);
+    if (quizQuestions[0].answers.a === quizQuestions[0].correctAnswer) {
+        console.log("correct");
+    } else {
+        console.log("wrong");
     }
 
-function displayQuestion2() {
-    $("#question-display").text(q2.question);
-    $("#answers1").text(q2.correct).click(function(){
-        correctAnswer2();
-        correctAnswerCounter++;
+    if (quizQuestions[0].answers.b === quizQuestions[0].correctAnswer) {
+        console.log("correct");
+    } else {
+        console.log("wrong");
+    }
+
+    if (quizQuestions[0].answers.c === quizQuestions[0].correctAnswer) {
+        console.log("correct");
+    } else {
+        console.log("wrong");
+    }
 
     });
-    $("#answers2").text(q2.answer1);
-    $("#answers3").text(q2.answer2);
+      quizQuestions.shift();
+
 }
 
-function displayQuestion3() {
-    $("#question-display").text(q3.question);
-    $("#answers1").text(q3.answer1);
-    $("#answers2").text(q3.answer2);
-    $("#answers3").text(q3.correct).click(function(){
-        correctAnswer3();
-        correctAnswerCounter++;
+  var endQuestions = setTimeout(endQuiz, 25000);
 
-    });
-}
+  function endQuiz() {
 
-function displayQuestion4() {
-    $("#question-display").text(q4.question);
-    $("#answers1").text(q4.answer1);
-    $("#answers2").text(q4.correct).click(function(){
-        correctAnswer4();
-        correctAnswerCounter++;
-    });
-    $("#answers3").text(q4.answer2);
-}
+    $(".quiz-display").text("end");
 
-function endofTriva() {
-    var wrongAnswerCounter = 4 - correctAnswerCounter;
-}
+  }
 
-//if answer is wrong display correct answer, blank
-//answers should also be marked wrong
-
-
-//if answer is correct display that it was correct
-function correctAnswer1() {
-    $("#answers2").text("Correct")
-    $( "#img1" ).show( "slow" );
-}
-
-function correctAnswer2() {
-    $("#answers1").text("Correct");
-}
-
-function correctAnswer3() {
-    $("#answers3").text("Correct");
-}
-
-function correctAnswer4() {
-    $("#answers4").text("Correct");
-}
-
-console.log(correctAnswerCounter);
-//final screen shows number of correct answers and incorrect
-
-
-
-
-
-//option to restart the game
-
-} //end of startGame()
-}
+}//stat game function closure
