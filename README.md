@@ -8,6 +8,8 @@ This is a Spongebob Trivia game. You'll have 5 seconds to answer a question. Whe
 - To stop and reset the game select the "Reset Game" button.
 
 **Answers**
+
+
 Question 1: What year did Spongebob air for the first time?"
 Answer: 1999
 
@@ -22,4 +24,4 @@ Anwer: Underwater Tree Dome
 Question 4: What instrument does Squidward play?
 Answer: Claranet
 
-Git pages link: 
+Git pages link: https://crashley1992.github.io/trivia-game/
