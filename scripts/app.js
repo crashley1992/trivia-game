@@ -107,9 +107,14 @@ function hide() {
     $(".correct-answer").hide(quizQuestions[0].correctAnswer);
 }
 
+function queue() {
+quizQuestions.shift();
+}
 var hideAnswer = setInterval(hide, 4800);
 
-var startQuestions = setInterval(questionQueue, 5000);
+var startQuestions = setInterval(questionQueue, 0000);
+var startQueue = setInterval(queue, 5000);
+
   function questionQueue() {
     $(".quiz-display").text(quizQuestions[0].question);
     $("#a").text(quizQuestions[0].answers.a);
@@ -139,7 +144,6 @@ var startQuestions = setInterval(questionQueue, 5000);
     }
 
     });
-      quizQuestions.shift();
 
 }
 
