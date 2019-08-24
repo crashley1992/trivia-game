@@ -120,20 +120,21 @@ var startQueue = setInterval(queue, 5000);
     $("#b").text(quizQuestions[0].answers.b);
     $("#c").text(quizQuestions[0].answers.c);
     $(".correct-answer").text(quizQuestions[0].correctAnswer);
-
+  }
 //onclick of any response shows answer
     $("#a, #b, #c").click(function(){
     $(".correct-answer").show(quizQuestions[0].correctAnswer);
 
     if (quizQuestions[0].answers.a === quizQuestions[0].correctAnswer) {
      console.log("correct");
-
+      correct++;
     } else {
         console.log("wrong");
     }
 
     if (quizQuestions[0].answers.b === quizQuestions[0].correctAnswer) {
       console.log("correct");
+      correct++;
 
       } else {
         console.log("wrong");
@@ -141,14 +142,18 @@ var startQueue = setInterval(queue, 5000);
 
     if (quizQuestions[0].answers.c === quizQuestions[0].correctAnswer) {
       console.log("correct");
+      correct++;
 
     } else {
         console.log("wrong");
     }
-
+    //correct counter --counting every button press
+    $(".correct-counter").text(correct);
+    console.log(correct);
     });
 
-}
+   
+
 //End queue display showing trivia is over
   var endQuestions = setTimeout(endQuiz, 20000);
 

@@ -71,3 +71,17 @@ h1 {
 .display {
     display: none;
 }
+
+/*Correct counter*/
+.correct-counter {
+    color: white;
+    font-size: bold;
+    width: 5%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    text-align: center;
+}
+
+#div-correct-counter {
+    color: white;
+}
