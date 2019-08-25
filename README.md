@@ -1,11 +1,13 @@
 # Trivia-game
-This is a Spongebob Trivia game. You'll have 5 seconds to answer a question. When an answer option is selected, the correct answer is immediately displayed. A timer is in the upper left corner to indicate how much time has passed.
+This is a Spongebob Trivia game. You'll have 5 seconds to answer a question. When an answer option is selected, the correct answer is immediately displayed. A timer is in the upper left corner to indicate how much time has passed. At then end you will see the amount of answers correct and incorrect. 
 
 **How it works**
 - To start the game you must select the "Start Game" button.
 - A question will appear every 5 seconds.
 - Select an answer option. The correct answer will be displayed below.
-- To stop and reset the game select the "Reset Game" button.
+- A counter will track on the upper left corner the correct answers.
+- At the end the timer will stop and display amount correct and incorrect answers. 
+- To stop and reset the game, select the "Reset Game" button.
 
 **Answers**
 
