@@ -15,8 +15,7 @@ function startGame() {
     start = true;
 //timer
 if (start = true) {
-    timeStart = setInterval(timer, 1000);
-
+    timeStart = setInterval(timer, 1000);    
 }
 //shows quiz div
 $("#start-button").hide();
@@ -29,6 +28,13 @@ time++;
 var converted = timeConverter(time);
 console.log(converted);
 $(".timer-display").text(converted);
+//stops timer after 20 seconds
+if (time === 20) {
+  clearInterval(timeStart);
+}
+
+
+
 
 //converts time to more human readable
 function timeConverter(i) {
@@ -49,7 +55,6 @@ else if (minutes < 10 ) {
 
 return minutes + ":" + seconds;
 }
-
 }
 
 //Question storage with questions and answers
