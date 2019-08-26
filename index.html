@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <!--Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--Bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Bootstrap Javascript-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Bootstrap Javascript-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
-<h1>Spongebob Trivia</h1>
-<div id="div-correct-counter"><h5>Correct: <span class="correct-counter"></span></h5></div>
-<div class="timer-display"></div>
+  <h1>Spongebob Trivia</h1>
+  <div id="div-correct-counter">
+    <h5>Correct: <span class="correct-counter"></span></h5>
+  </div>
+  <div class="timer-display"></div>
 
 
-<div class="start-button-display">
-<button type="button" onclick="startGame()" id="start-button" class="btn btn-success">Start Game</button>
-<button type="button" onclick="stopGame()" id="stop-button" class="btn btn-danger">Reset Game</button>
-</div>
+  <div class="start-button-display">
+    <button type="button" onclick="startGame()" id="start-button" class="btn btn-success">Start Game</button>
+    <button type="button" onclick="stopGame()" id="stop-button" class="btn btn-danger">Reset Game</button>
+  </div>
 
-<div class="display">
-<h2 class="quiz-display"></h2>
+  <div class="display">
+    <h2 class="quiz-display"></h2>
 
-<div class="button-display">
-<button id="a" type="button" class="btn btn-info"></button>
-<button id="b" type="button" class="btn btn-info"></button>
-<button id="c" type="button" class="btn btn-info"></button>
-</div>
+    <div class="button-display">
+      <button id="a" type="button" class="btn btn-info"></button>
+      <button id="b" type="button" class="btn btn-info"></button>
+      <button id="c" type="button" class="btn btn-info"></button>
+    </div>
 
-<h2 class="correct-answer"></h2>
-</div>
+    <h2 class="correct-answer"></h2>
+  </div>
 
-<div class="score">
-    <div id="div-correct-counter"><h5>Correct: <span class="correct-counter"></span></h5></div>
-    <div id="div-wrong-counter"><h5>Wrong: <span class="wrong-counter"></span></div>
-        <img id="end-game-img" src="images/end-pic.jpg" alt="whole sponge crew">
-</div>
+  <div class="score">
+    <div id="div-correct-counter">
+      <h5>Correct: <span class="correct-counter"></span></h5>
+    </div>
+    <div id="div-wrong-counter">
+      <h5>Wrong: <span class="wrong-counter"></span>
+    </div>
+    <img id="end-game-img" src="images/end-pic.jpg" alt="whole sponge crew">
+  </div>
 
 
-<script src="scripts/app.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
+
 </html>

@@ -1,116 +1,124 @@
 body {
-   background-image: url("../images/Bubbletown_002.png") !important;
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center top; 
+  background-image: url("../images/Bubbletown_002.png") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
+
 /*Title text*/
 h1 {
-    text-align: center;
-    font-family: 'Indie Flower', cursive;
-    color: white;
-    margin-bottom: 2%;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  margin-bottom: 2%;
 }
+
 /*For timer once start is clicked*/
 .timer-display {
-    background-color: white;
-    width: 15%;
-    text-align: center;
-    font-weight: bold;
-    color: red;
+  background-color: white;
+  width: 15%;
+  text-align: center;
+  font-weight: bold;
+  color: red;
 }
+
 /*Display for question*/
 .quiz-display {
-    text-align: center;
-    background: white;
-    border: solid black 2px;
-    margin-top: 2%;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  text-align: center;
+  background: white;
+  border: solid black 2px;
+  margin-top: 2%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 /*Shows answer selections*/
 .button-display {
-    margin-top: 2%;
-    padding-bottom: 1%;
-    background-color: white;
-    border: solid black 2px;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  background-color: white;
+  border: solid black 2px;
 }
 
 /*Display for correct answer*/
 .correct-answer {
-    display: none;
-    background-color: white;
-    border: solid green 2px;
-    color: green;
-    margin-top: 1%;
-    text-align: center;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+  display: none;
+  background-color: white;
+  border: solid green 2px;
+  color: green;
+  margin-top: 1%;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 /*Positioning for buttons*/
-.button-display > button {
-    display: block;
-    margin-top: 1%;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: bold;
-    font-size: 25px;
+.button-display>button {
+  display: block;
+  margin-top: 1%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 25px;
 }
+
 /*Start button is centered*/
 .start-button-display {
-    text-align: center;
+  text-align: center;
 }
+
 /*Hides the quiz until start button is selected*/
 .display {
-    display: none;
+  display: none;
 }
+
 /*Display at end*/
 .score {
-    display: none;
-    background-color: white;
-    width: 80%;
-    border: solid black 2px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  display: none;
+  background-color: white;
+  width: 80%;
+  border: solid black 2px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Correct counter*/
 .correct-counter {
-    color: green;
-    font-size: 20px;
-    font-weight: bold;
-    width: 5%;
-    margin-bottom: 1%;
-    margin-left: 1%;
-    text-align: center;
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  width: 5%;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  text-align: center;
 }
+
 /*label text styling*/
 #div-correct-counter {
-    background-color: white;
-    color: green;
-    width: 25%;
+  background-color: white;
+  color: green;
+  width: 25%;
 }
-/*label text styling*/
 
+/*label text styling*/
 #div-wrong-counter {
-    width: 25%;
-    color: red;
+  width: 25%;
+  color: red;
 }
+
 /*Styles number output*/
 .wrong-counter {
-    color: red;
-    width: 25%;
+  color: red;
+  width: 25%;
 }
 
 #end-game-img {
-    width: 300px;
-    height: 200px;
+  width: 300px;
+  height: 200px;
 }
